@@ -34,4 +34,8 @@ int is_dev_online(unsigned long timeout);
 
 /********************** cam *********************/
 
+/********************** arm *********************/
+void init_arm_pwm(void);
+void arm_pwm_test(int angle);
+
 #endif

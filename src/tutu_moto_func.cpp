@@ -126,14 +126,14 @@ void init_moto_gpio(void)
 	pinMode(MOTO_R_EN_GPIO_NUM, OUTPUT);
 	digitalWrite(MOTO_R_EN_GPIO_NUM, LOW);
 	/* LOW : in1 , in2 , in3 , in4 */
-	pinMode(MOTO_L_IN1_GPIO_NUM, OUTPUT);
-	pinMode(MOTO_L_IN2_GPIO_NUM, OUTPUT);
-	pinMode(MOTO_R_IN3_GPIO_NUM, OUTPUT);
-	pinMode(MOTO_R_IN4_GPIO_NUM, OUTPUT);
-	digitalWrite(MOTO_L_IN1_GPIO_NUM, LOW);
-	digitalWrite(MOTO_L_IN2_GPIO_NUM, LOW);
-	digitalWrite(MOTO_R_IN3_GPIO_NUM, LOW);
-	digitalWrite(MOTO_R_IN4_GPIO_NUM, LOW);
+	pinMode(MOTO_L_IN4_GPIO_NUM, OUTPUT);
+	pinMode(MOTO_L_IN3_GPIO_NUM, OUTPUT);
+	pinMode(MOTO_R_IN2_GPIO_NUM, OUTPUT);
+	pinMode(MOTO_R_IN1_GPIO_NUM, OUTPUT);
+	digitalWrite(MOTO_L_IN4_GPIO_NUM, LOW);
+	digitalWrite(MOTO_L_IN3_GPIO_NUM, LOW);
+	digitalWrite(MOTO_R_IN2_GPIO_NUM, LOW);
+	digitalWrite(MOTO_R_IN1_GPIO_NUM, LOW);
 }
 void init_moto_pwm(void)
 {
@@ -169,13 +169,13 @@ void change_moto_by_dir(int which , int dir)
 	switch(which){
 		case MOTO_LEFT:
 			//en = MOTO_L_EN_GPIO_NUM ;
-			in1 = MOTO_L_IN1_GPIO_NUM ;
-			in2 = MOTO_L_IN2_GPIO_NUM ;
+			in1 = MOTO_L_IN4_GPIO_NUM ;
+			in2 = MOTO_L_IN3_GPIO_NUM ;
 			break;
 		case MOTO_RIGHT:
 			//en = MOTO_R_EN_GPIO_NUM ;
-			in1 = MOTO_R_IN3_GPIO_NUM ;
-			in2 = MOTO_R_IN4_GPIO_NUM ;
+			in1 = MOTO_R_IN2_GPIO_NUM ;
+			in2 = MOTO_R_IN1_GPIO_NUM ;
 			break;
 		default:
 			break;//do nothing 
