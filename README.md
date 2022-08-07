@@ -11,7 +11,7 @@ https://github.com/YuJianJ/tutu.git
 - 370直流电机
 - L298N
 - MPU6050
-- hardware // gerber文件等
+- hardware // gerber文件、项目图片等
 ## 软件
 - VScode (Windows/MacOS/Ubuntu)
 - PlatformIO
@@ -23,9 +23,10 @@ https://github.com/YuJianJ/tutu.git
 ## iic
 - MPU6050  // 三维角度传感器用于修正车辆角度、设备角度、速度等
 ## wifi
-- Blinker  // 基于Blinker的库建立了一个wifi传输系统
+- Blinker  // 基于Blinker的库建立了一个wifi传输系统 （MQTT）
+- ESP-IDF  // 基于Arduino的库建立了一个wifi传输系统 （for branch MASTER）
 ## ble
 - Blinker  // 基于Blinker的库建立了一个BLE传输系统
 ## uwb
 ## uart
-- 串口  // 串口传输
+- 串口  // 串口传输（DEBUG）
